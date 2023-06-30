@@ -1,0 +1,15 @@
+input_string = input()
+
+char = input_string[0]
+phrase = input_string[1:]
+
+
+count = 0
+
+for i in phrase:
+    if i == char:
+        count += 1
+if count != 1:
+    print(f'{count} {char}\'s')
+else:
+    print(f'{count} {char}')
