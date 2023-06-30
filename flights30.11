@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+file = input()
+
+# TODO: Read in the CSV file as a dataframe
+flights = pd.read_csv(file)
+
+# TODO: Print the average of flight delays and flight cancellations
+delay_flight = round(flights['Delayed'].mean(), 2)
+cancel_flight = round(flights['Cancelled'].mean(), 2)
+print(f'Average delays: {delay_flight}')
+print(f'Average cancellations: {cancel_flight}')
+
+# TODO: Create a lineplot of flight delays vs months
+flights.plot(x = "Month", y = ['Delayed', 'Cancelled'])
+plt.title('Flight status at LAX', fontsize = 14)
+plt.xlabel('Months', fontsize = 10)
+plt.ylabel('Number of flights', fontsize = 10)
+plt.legend(['Delays', 'Cancellations'])
+#plt.savefig('output_fig.png')
+
+# TODO: In the same figure, create a lineplot of flight cancellations vs months
+
+
+# TODO: Add axis labels, title, and legend
+
+
+# Save figure as output_fig.png
+plt.savefig('output_fig.png')
