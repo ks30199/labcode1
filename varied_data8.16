@@ -1,0 +1,13 @@
+input_num = input()
+num = input_num.split()
+
+max = 0
+sum = 0
+
+for i in num:
+    sum += float(i)
+    
+    if float(i) > max:
+        max = float(i)
+mean = sum / len(num)
+print(f'{max:.2f} {mean:.2f}')
