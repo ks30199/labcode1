@@ -1,0 +1,5 @@
+input_integer = input()
+list = [int(x) for x in input_integer.split(' ') if int(x) < 0]
+list.sort(reverse = True)
+for x in list:
+    print(x, end = ' ')
