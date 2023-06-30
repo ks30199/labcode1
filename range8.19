@@ -1,0 +1,7 @@
+input_list = input()
+name = input()
+
+for i in input_list.split():
+    search = i.split(',')
+    if search[0] == name:
+        print(search[1])
