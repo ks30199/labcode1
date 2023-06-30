@@ -1,0 +1,29 @@
+highway_number = int(input())
+
+if (highway_number < 1) or (highway_number > 999):
+    print(f"{highway_number} is not a valid interstate highway number.")
+elif highway_number == 200:
+    print(f"{highway_number} is not a valid interstate highway number.")
+
+if (highway_number >= 1) and (highway_number <= 999) and (highway_number != 200):
+    south_east = highway_number % 2
+    if (highway_number >= 100) and (south_east == 0):
+        primary_num = highway_number % 100
+        print(f"I-{highway_number} is auxiliary, serving I-{primary_num}, going east/west.")
+    elif (highway_number >= 100) and (south_east != 0):
+        primary_num = highway_number % 100
+        print(f"I-{highway_number} is auxiliary, serving I-{primary_num}, going north/south.")
+    elif (highway_number < 100) and (south_east == 0):
+        primary_num = highway_number % 100
+        print(f"I-{highway_number} is primary, going east/west.")
+    elif (highway_number < 100) and (south_east != 0):
+        primary_num = highway_number % 100
+        print(f"I-{highway_number} is primary, going north/south.")
+        
+"""
+
+    if direction % 2 == 0:
+        print('east/west')
+    else:
+        print('north/south')
+"""
