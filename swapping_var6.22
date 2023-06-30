@@ -1,0 +1,21 @@
+def swap_values(num1,num2,num3,num4):
+    swap = num1
+    num1 = num2
+    num2 = swap
+    
+    swap2 = num3
+    num3 = num4
+    num4 = swap2
+    
+    return num1,num2,num3,num4
+    
+    
+
+if __name__ == '__main__': 
+    num1 = int(input())
+    num2 = int(input())
+    num3 = int(input())
+    num4 = int(input())
+    
+    list = swap_values(num1,num2,num3,num4)
+    print(*list, sep = ' ')
