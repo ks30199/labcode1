@@ -1,0 +1,28 @@
+def int_to_reverse_binary(integer_value):
+        list = ''
+        while integer_value > 0:
+            list += str(integer_value % 2)
+            integer_value = integer_value // 2
+        return list
+        
+        #integer_value = integer_value // 2
+    
+def string_reverse(input_string):
+    list = ''
+    for i in range(len(input_string) - 1, -1, -1):
+        list += input_string[i]
+    return list
+        
+
+if __name__ == '__main__':
+    integer = int(input())
+    reverse_int = int_to_reverse_binary(integer)
+    reverse = string_reverse(reverse_int)
+    print(reverse)
+    
+    
+    # Your code must call int_to_reverse_binary() to get 
+    # the binary string of an integer in a reverse order.
+    # Then call string_reverse() to reverse the string
+    # returned from int_to_reverse_binary().
+
