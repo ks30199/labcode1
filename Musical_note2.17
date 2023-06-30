@@ -1,0 +1,13 @@
+import math
+hertz = float(input())
+
+r = 2 ** (1/12)
+n = 1
+frequency = hertz * (r ** 1)
+frequency2 = hertz * (r ** 2)
+frequency3 = hertz * (r ** 3)
+
+print(f'{hertz:.2f} Hz')
+print(f'{frequency:.2f} Hz')
+print(f'{frequency2:.2f} Hz')
+print(f'{frequency3:.2f} Hz')
