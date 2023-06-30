@@ -1,0 +1,11 @@
+input_string = []
+while True:
+    line = input()
+    if 'quit' in line:
+        break
+    else:
+        input_string.append(line)
+
+for line in input_string:
+    a,b = line.split(' ')
+    print(f'Eating {b} {a} a day keeps you happy and healthy.')
