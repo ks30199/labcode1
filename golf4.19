@@ -1,0 +1,17 @@
+par = int(input())
+strokes = int(input())
+
+if ((par != 3) and (par != 4) and (par != 5)):
+    print("Error")
+
+elif (strokes <= par -2):
+    print("Eagle")
+
+elif (strokes <= par -1):
+    print("Birdie")
+
+elif (strokes == par):
+    print("Par")
+
+else:
+    print("Bogey")
