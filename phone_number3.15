@@ -1,0 +1,10 @@
+phone_number = int(input())
+
+number = phone_number % 10000
+phone_number = (phone_number // 10000)
+three_digit = phone_number % 1000
+phone_number = (phone_number // 1000)
+
+
+final = "(" + str(phone_number) + ") " + str(three_digit) + "-" + str(number)
+print(final)
