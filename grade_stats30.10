@@ -1,0 +1,35 @@
+import pandas as pd
+
+file_name = input()
+
+# TODO: Read in file_name as a dataframe
+scores = pd.read_csv(file_name, sep = '\t')
+# TODO: Output rows by descending Final scores
+
+scores_sort = scores.sort_values(by = 'Final', ascending = False)
+print(scores_sort)
+
+print("\nMax Scores:")
+
+# TODO: Output the max scores of each assignment
+max_sc = scores[['Midterm1', 'Midterm2', 'Final']].max()
+print(max_sc.to_string())
+
+
+print("\nMedian Scores:")
+
+# TODO: Output the median scores of each assignment
+median_sc = scores[['Midterm1', 'Midterm2', 'Final']].median()
+print(median_sc.to_string())
+
+print("\nAverage Scores:")
+
+# TODO: Output the average scores of each assignment.
+mean = scores[['Midterm1', 'Midterm2', 'Final']].mean()
+print(mean.to_string())
+
+print("\nStandard Deviation:")
+
+# TODO: Output the standard devation of each assignment.
+sd_sc = scores[['Midterm1', 'Midterm2', 'Final']].std()
+print(sd_sc.to_string())
