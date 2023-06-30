@@ -1,0 +1,8 @@
+list = input().split()
+
+if len(list) == 3:
+    firstname, middlename, lastname = list
+    print(f'{lastname}, {firstname[0]}.{middlename[0]}.')
+elif len(list) == 2:
+    firstname, lastname = list
+    print(f'{lastname}, {firstname[0]}.')
