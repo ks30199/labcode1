@@ -1,0 +1,11 @@
+import math
+x = float(input())
+y = float(input())
+z = float(input())
+
+x_power_z = x**z
+x_power_y_z = x**(y**z)
+absolute_x_y = abs(x - y)
+square_root = math.sqrt(x**z)
+
+print(f'{x_power_z:.2f} {x_power_y_z:.2f} {absolute_x_y:.2f} {square_root:.2f}')
