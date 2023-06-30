@@ -1,0 +1,21 @@
+from decimal import Decimal
+
+max = 0
+list = []
+values_num = int(input())
+
+for i in range(0,values_num):
+    input_num = float(input())
+    
+    if input_num > max:
+        max = input_num
+    list.append(input_num)
+#print(list)
+#print(max)
+
+for i in range(0, values_num):
+    list[i] = list[i] / max
+    
+    print(f'{list[i]:.2f}')
+
+#print(*list, sep = "\n")
