@@ -1,0 +1,14 @@
+# TODO: Write recursive digit_count() function here.
+
+def digit_count(num):
+    if num < 10:
+        return 1
+    else:
+        new_num = (1 + (digit_count(num / 10)))
+        return new_num
+    
+
+if __name__ == '__main__':
+    num = int(input())
+    digit = digit_count(num)
+    print(digit)
