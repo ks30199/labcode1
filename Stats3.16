@@ -1,0 +1,10 @@
+num1 = float(input())
+num2 = float(input())
+num3 = float(input())
+num4 = float(input())
+
+one_value = num1 * num2 * num3 * num4
+two_value = ((num1 + num2 + num3 + num4) /4)
+
+print(f'{one_value:.0f} {two_value:.0f}')
+print(f'{one_value:.3f} {two_value:.3f}')
