@@ -1,0 +1,34 @@
+''' Read in first equation, ax + by = c '''
+
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+
+''' Read in second equation, dx + ey = f '''
+d = int(input())
+e = int(input())
+f = int(input())
+
+def function_one(x, y):
+    ans = a*x + b*y - c
+    return ans
+
+def function_two(x, y):
+    ans = d*x + e*y - f
+    return ans
+
+final_x = 100
+final_y = 100
+
+for x in range(-10, 11):
+    for y in range(-10, 11):
+        if (function_one(x,y) == function_two(x,y)) and (function_one(x,y) == 0):
+            final_x = x
+            final_y = y
+if final_x != 100:
+    print(f"x = {final_x} , y = {final_y}")
+else:
+    print("There is no solution")
+    
